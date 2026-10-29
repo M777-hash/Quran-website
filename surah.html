@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>القرآن الكريم</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00897b">
+</head>
+
+<body>
+
+    <div id="sura-name"></div>
+    <div id="verses"></div>
+
+    <script src="javascript/surah.js"></script>
+   
+    
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+            console.error("تعذر تسجيل Service Worker:", error);
+          });
+        });
+      }
+    </script>
+</body>
+</html>

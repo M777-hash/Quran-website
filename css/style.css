@@ -1,0 +1,681 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+body {
+    min-height: 100vh;      /* الصفحة طولها قد الشاشة */
+    padding-bottom: 50px;   /* تبعد آخر عنصر من تحت */
+    box-sizing: border-box; 
+}
+
+header {
+    background: #008b8b; /* لون خلفية لطيف */
+    padding: 10px 0;
+}
+
+.container-1 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    position: relative; /* مهم عشان نقدر نثبت اللينكات في النص */
+}
+
+.container-1 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    object-fit: cover;
+    margin-right: 40px; /* الصورة تتحرك شمال شوية */
+    /* margin-top: 10px; */
+    
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    position: absolute;  
+    left: 50%;  
+    transform: translateX(-50%); /* علشان تبقى في النص */
+    text-align: center;
+    /* padding-left: 10px */
+}
+
+.links li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.links li a:hover {
+    color: white;
+}
+
+.linkss {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    position: absolute;  
+    left: 50%;  
+    transform: translateX(-50%); /* علشان تبقى في النص */
+    text-align: center;
+    /* padding-left: 10px */
+}
+
+.linkss li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.linkss li a:hover {
+    color: white;
+}
+/*--------------------- الريسبونسيف ---------------------*/
+@media (max-width: 768px) {
+    .container-1 {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .links {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .linkss {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+
+    .links li a {
+        font-size: 18px;
+    }
+}
+/* ///////////////////////////////////////////////////////////////////////// */
+nav {
+     /* width: 85%; */
+    /* margin: 0 auto; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+     row-gap: 50px;
+    justify-items: center;
+    margin-top: 25px;
+     direction: rtl;
+  
+}
+nav button{
+    width: 60%;
+    min-height: 50px;
+    font-size: 30px;
+    background-color:white ;
+    border: 1px solid #bcbebe;
+    color: #008b8b;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     /* direction: ltr; */
+}
+nav a{
+    text-decoration: none;
+      /* border: 1px solid #bcbebe; */
+    color: #008b8b;
+
+}
+nav a:hover{
+    color:blue;
+    transition: .3s;
+}
+@media (max-width: 700px) {
+    nav {
+        grid-template-columns: 1fr; /* يخليهم عمود */
+        row-gap: 20px; /* مسافة أصغر بين الأزرار */
+        /* grid-column: column-reverse; */
+    }
+
+    nav button {
+        width: 70%; /* يوسع العرض شوية */
+        font-size: 24px; 
+    }
+}
+@media (max-width: 1024px) and (min-width: 701px) {
+    nav {
+        grid-template-columns: repeat(2, 1fr); /* 2 أعمدة */
+        row-gap: 20px;
+    }
+
+    nav button {
+        width: 70%;
+        font-size: 24px;
+    }
+}
+/* ////////////////////////////////////////////////////////////// */
+.things ul {
+    /* display: flex; */
+     list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    position: absolute;  
+    left: 50%;  
+    transform: translateX(-50%); /* علشان تبقى في النص */
+    text-align: center;
+     direction: rtl;
+        margin-top: 10px;
+}
+.things h2{
+      left: 50%;  
+    padding-top: 50px;
+    margin-top: 20px;
+    text-align: center;
+    color: blue;
+}
+
+.three-things li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 5, 0);
+    transition: 0.3s;
+     direction: rtl;
+     margin-bottom: 10px;
+    
+}
+.three-things li a:hover{
+    color: red;
+}
+hr{
+    margin-top: 5px;
+}
+
+@media (max-width: 700px) {
+    .things h2 {
+      padding-top: 90px;
+    }
+     }
+/* ///////////////////////////////////////////////////// */
+.buttons-azkar{
+    justify-items: center;
+    text-align: center;
+}
+
+.buttons-azkarr{
+    justify-items: center;
+    text-align: center;
+}
+.buttons-azkar button{
+      row-gap: 50px;
+    justify-items: center;
+    text-align: center;
+    margin-top: 25px;
+    /* cursor: pointer; */
+    width: 75%;
+    max-width: 80%;
+    min-height: 70px;
+     line-height: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+     padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+
+}
+
+.buttons-azkarr button{
+      row-gap: 50px;
+    justify-items: center;
+    text-align: center;
+    margin-top: 55px;
+    /* cursor: pointer; */
+    width: 75%;
+    max-width: 80%;
+    min-height: 70px;
+     line-height: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+     padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+
+}
+.azkar-sabah{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    color: black;
+}
+ .azkar-sabah .fa-sun{
+    color:green;
+    font-size: larger;
+}
+ .azkar-sabah .fa-question-circle{
+    color:green;
+    font-size:larger;
+ }
+ .azkar-sabah .fa-book-open{
+    color:green;
+    font-size:larger;
+ }
+ .azkar-sabah .fa-praying-hands{
+    color:green;
+    font-size:larger;
+ }
+@media (max-width: 700px) {
+    .buttons-azkar {
+        grid-template-columns: 1fr; /* يخليهم عمود */
+        row-gap: 20px; /* مسافة أصغر بين الأزرار */
+        /* grid-column: column-reverse; */
+    }
+
+   .buttons-azkar button {
+        width: 70%; /* يوسع العرض شوية */
+        font-size: 24px; 
+        line-height: 50px;
+        /* height: 80%; */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 701px) {
+     .buttons-azkar {
+        grid-template-columns:1fr; /* 2 أعمدة */
+        row-gap: 20px;
+    }
+
+    .buttons-azkar button {
+        width: 80%;
+        font-size: 24px;
+          line-height: 50px;
+          padding-left: 15px;
+           /* padding-left: 15px; */
+        padding-right: 15px;
+    }
+}
+
+.buttons-azkar-1{
+    justify-items: center;
+    text-align: center;
+}
+.buttons-azkar-1 button{
+      row-gap: 50px;
+    justify-items: center;
+    text-align: center;
+    margin-top: 25px;
+    /* cursor: pointer; */
+    width: 75%;
+    max-width: 80%;
+    min-height: 70px;
+     line-height: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+     padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+
+}
+.azkar-masaa{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    color: black;
+}
+ .azkar-masaa .fa-moon{
+    color:green;
+    font-size: larger;
+}
+ 
+@media (max-width: 700px) {
+    .buttons-azkar-1 {
+        grid-template-columns: 1fr; /* يخليهم عمود */
+        row-gap: 20px; /* مسافة أصغر بين الأزرار */
+        /* grid-column: column-reverse; */
+    }
+
+   .buttons-azkar-1 button {
+        width: 70%; /* يوسع العرض شوية */
+        font-size: 24px; 
+        line-height: 50px;
+        /* height: 80%; */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 701px) {
+     .buttons-azkar-1 {
+        grid-template-columns:1fr; /* 2 أعمدة */
+        row-gap: 20px;
+    }
+
+    .buttons-azkar-1 button {
+        width: 80%;
+        font-size: 24px;
+          line-height: 50px;
+          padding-left: 15px;
+           /* padding-left: 15px; */
+        padding-right: 15px;
+    }
+}
+/* ////////////////////////////////////////////////////////// */
+ #sura-name {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    font-weight: bold;
+    color:blue;
+}
+
+#verses {
+    direction: rtl;
+    text-align: justify;        /* يوزع النص ليملأ السطر بالكامل */
+    text-justify: inter-word;   /* يوزع الكلمات بشكل صحيح */
+    line-height: 3;             /* مسافة بين السطور */
+    max-width: 1000px;           /* عرض المحتوى */
+    margin: 0 auto;             /* يتركه في منتصف الصفحة */
+    padding: 20px;
+    word-break: break-word;
+    background: #f7f7f7;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.ayah {
+    display: inline;
+    font-size: 28px;
+    margin: 0 6px 0 0;
+}
+.verse-number {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: green;
+    
+}
+
+/* ====== Responsive ====== */
+
+/* تابلت */
+@media screen and (max-width: 1024px) {
+    #sura-name {
+        font-size: 24px;
+    }
+    .ayah {
+        font-size: 28px;
+    }
+    #verses {
+        padding: 15px;
+    }
+}
+
+/* موبايل */
+@media screen and (max-width: 600px) {
+    #sura-name {
+        font-size: 24px;
+    }
+    .ayah {
+        font-size: 28px;
+    }
+    #verses {
+        padding: 15px;
+    }
+}
+.basmala {
+    text-align: center;       /* في منتصف الصفحة */
+    font-size: 32px;          /* حجم الخط أكبر */
+    /* font-weight: bold; */
+    display: block;
+    margin-bottom: 20px;      /* مسافة قبل بداية الآيات */
+}
+
+
+
+/* ===== تحسين عرض الهيدر على الموبايل ===== */
+header {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        padding: 12px 10px;
+    }
+
+    .container-1 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .container-1 img {
+        width: 58px;
+        height: 58px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .links,
+    .linkss {
+        position: static;
+        transform: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px 16px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .links li,
+    .linkss li {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .links li a,
+    .linkss li a {
+        display: block;
+        font-size: 17px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+}
+
+/* ===== ضبط المسافات بين آيات القرآن ===== */
+#verses {
+    width: 100%;
+    max-width: 1000px;
+    margin: 16px auto 0;
+    padding: 16px;
+    direction: rtl;
+    text-align: right;
+    text-justify: auto;
+    line-height: 2.35;
+    overflow-wrap: normal;
+    word-break: normal;
+    box-sizing: border-box;
+}
+
+.ayah {
+    display: inline;
+    font-size: 28px;
+    margin: 0;
+}
+
+.verse-number {
+    display: inline;
+    padding-inline: 3px;
+    white-space: nowrap;
+}
+
+.basmala {
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    #sura-name {
+        font-size: 25px;
+        padding: 16px 10px 0;
+    }
+
+    #verses {
+        width: 100%;
+        margin-top: 16px;
+        padding: 16px 14px;
+        line-height: 2.2;
+        border-radius: 0;
+    }
+
+    .ayah {
+        font-size: 25px;
+    }
+
+    .basmala {
+        font-size: 27px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* ===== إصلاح صفحات عن الموقع واتصل بنا ===== */
+
+.things {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 24px;
+    padding: 12px;
+    clear: both;
+    box-sizing: border-box;
+}
+
+.three-things {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px 24px;
+    list-style: none;
+}
+
+.three-things li {
+    position: static;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.three-things li a {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 1.7;
+    text-decoration: none;
+}
+
+/* صندوق محتوى الصفحة */
+.page-content {
+    position: relative;
+    display: block;
+    width: calc(100% - 32px);
+    max-width: 650px;
+    height: auto;
+    margin: 20px auto;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #484848;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    overflow-wrap: anywhere;
+    line-height: 1.9;
+}
+
+.page-content p {
+    margin: 0 0 20px;
+    font-size: 22px;
+    line-height: 1.9;
+}
+
+.page-content h3 {
+    margin: 20px 0 8px;
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+.page-content a {
+    color: #d6d0ff;
+    text-decoration: underline;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+@media (max-width: 600px) {
+    .things {
+        margin-bottom: 12px;
+        padding: 10px;
+    }
+
+    .three-things {
+        gap: 8px 18px;
+    }
+
+    .three-things li a {
+        font-size: 17px;
+    }
+
+    .page-content {
+        width: calc(100% - 24px);
+        margin: 70px auto 24px;
+        padding: 16px;
+        border-radius: 8px;
+        /* margin-top: 80px; */
+    }
+
+    .page-content p {
+        font-size: 19px;
+        line-height: 1.9;
+        /* padding-top: 80px; */
+    }
+
+    .page-content h3 {
+        font-size: 20px;
+    }
+
+    .page-content a {
+        font-size: 17px;
+    }
+}
+.page-content {
+    margin-top: 50px;
+}
